@@ -2,13 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM-Baking Handbook - 5 Steps</title>
     <style>
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
+            /* Khóa chiều rộng tối thiểu để không bị co vỡ giao diện trên mobile */
+            min-width: 1024px; 
         }
 
         body {
@@ -33,7 +34,7 @@
         }
 
         h1 {
-            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            font-size: 3.2rem; /* Cố định kích thước chữ */
             text-shadow: 3px 3px 15px rgba(0,0,0,0.8);
             margin: 0 auto 5px auto;
         }
@@ -52,8 +53,7 @@
             padding: 40px;
             border-radius: 40px;
             box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-            max-width: 1000px;
-            width: 92%;
+            width: 1000px; /* Cố định chiều rộng card */
             margin-bottom: 50px;
             border: 6px double #d81b60;
             position: relative;
@@ -109,7 +109,6 @@
 
         .qr-box img { width: 100%; display: block; }
 
-        /* --- TRANG TRÍ ĐỒ ĂN CHI TIẾT --- */
         .food-decor {
             width: 35%;
             text-align: center;
@@ -141,7 +140,6 @@
         .video-text h3 { margin: 0 0 5px 0; color: #d81b60; font-size: 1.2rem; }
         .video-text p { margin: 0; font-size: 0.95rem; color: #444; line-height: 1.4; }
 
-        /* Hạt cốm trang trí nền */
         .sprinkle {
             position: absolute;
             font-size: 1.2rem;
@@ -149,11 +147,7 @@
             pointer-events: none;
         }
 
-        @media (max-width: 768px) {
-            .food-decor { display: none; }
-            .video-container { width: 100%; }
-            .process-step { flex-direction: column !important; }
-        }
+        /* ĐÃ XÓA PHẦN @MEDIA RESPONSIVE ĐỂ GIỮ NGUYÊN GIAO DIỆN PC */
     </style>
 </head>
 <body>
@@ -172,7 +166,6 @@
         <h2>Menu các loại bánh</h2>
 
         <div class="step-wrapper">
-
             <div class="process-step step-left">
                 <div class="video-container">
                     <div class="qr-box"><img src="https://via.placeholder.com/150?text=QR+1"></div>
@@ -211,40 +204,4 @@
                 </div>
                 <div class="food-decor">
                     <span class="food-icon">🥐</span>
-                    <span class="food-tag">Tạo hình thủ công</span>
-                </div>
-            </div>
-
-            <div class="process-step step-right">
-                <div class="video-container">
-                    <div class="qr-box"><img src="https://via.placeholder.com/150?text=QR+4"></div>
-                    <div class="video-text">
-                        <h3>4. Kiểm soát nhiệt lò</h3>
-                        <p>Phản ứng Maillard ở 140°C-160°C giúp bánh có màu vàng nâu và hương thơm cực phẩm.</p>
-                    </div>
-                </div>
-                <div class="food-decor">
-                    <span class="food-icon">🔥</span>
-                    <span class="food-tag">Nướng bánh chuẩn độ</span>
-                </div>
-            </div>
-
-            <div class="process-step step-left">
-                <div class="video-container">
-                    <div class="qr-box"><img src="https://via.placeholder.com/150?text=QR+5"></div>
-                    <div class="video-text">
-                        <h3>5. Hoàn thiện & Thưởng thức</h3>
-                        <p>Đóng gói chuẩn vi sinh và trang trí nghệ thuật để tăng giá trị cho nông sản Việt.</p>
-                    </div>
-                </div>
-                <div class="food-decor">
-                    <span class="food-icon">🍰</span>
-                    <span class="food-tag">Thành phẩm 5 sao</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</body>
-</html>
+                    <span class="food-tag">Tạo hình thủ
