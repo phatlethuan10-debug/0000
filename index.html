@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>STEM-Baking Handbook - 6 Steps</title>
     <style>
+        /* SỬA LỖI THANH CUỘN */
         html, body {
             margin: 0;
             padding: 0;
-            min-width: 1024px; /* Giữ giao diện máy tính */
+            min-width: 1024px; 
+            min-height: 100vh;
+            overflow-x: auto; /* Cho phép cuộn ngang nếu màn hình quá nhỏ */
+            overflow-y: visible; /* QUAN TRỌNG: Cho phép cuộn dọc để thấy hết 6 ô */
             background: #222;
         }
 
@@ -22,7 +26,7 @@
             flex-direction: column;
             align-items: center;
             color: white;
-            min-height: 100vh;
+            padding-bottom: 100px; /* Tạo khoảng trống cuối trang để không bị sát mép */
         }
 
         .header-section { text-align: center; padding: 30px 20px; width: 1000px; }
@@ -32,15 +36,15 @@
         .content-card {
             background: rgba(255, 255, 255, 0.96);
             color: #222;
-            padding: 25px 40px;
+            padding: 30px 40px;
             border-radius: 40px;
             width: 950px;
-            margin-bottom: 50px;
             border: 6px double #d81b60;
             position: relative;
+            margin-top: 20px;
         }
 
-        h2 { color: #d81b60; border-bottom: 4px solid #ffb7c5; font-size: 1.6rem; margin-top: 0; }
+        h2 { color: #d81b60; border-bottom: 4px solid #ffb7c5; font-size: 1.6rem; margin-top: 0; margin-bottom: 30px; }
 
         .step-wrapper { display: flex; flex-direction: column; gap: 35px; } 
 
@@ -53,7 +57,7 @@
             display: flex;
             align-items: center;
             background: #fff;
-            padding: 12px;
+            padding: 15px;
             border: 3px solid #d81b60;
             box-shadow: 8px 8px 0px #ffb7c5;
             width: 55%;
@@ -61,17 +65,17 @@
             transition: 0.3s;
         }
 
-        .video-container:hover { transform: scale(1.02); background: #fff0f3; border-color: #ffb7c5; }
+        .video-container:hover { transform: scale(1.02); background: #fff0f3; }
 
-        .qr-box { flex: 0 0 70px; margin: 0 15px; border: 1px dashed #d81b60; }
+        .qr-box { flex: 0 0 80px; margin: 0 15px; border: 1px dashed #d81b60; }
         .qr-box img { width: 100%; display: block; }
 
         .food-decor { width: 35%; text-align: center; }
-        .food-icon { font-size: 4rem; display: block; filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2)); }
-        .food-tag { background: #d81b60; color: white; padding: 3px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; }
+        .food-icon { font-size: 4.5rem; display: block; }
+        .food-tag { background: #d81b60; color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; }
 
-        .video-text h3 { margin: 0; color: #d81b60; font-size: 1.1rem; }
-        .video-text p { margin: 2px 0 0 0; font-size: 0.85rem; color: #555; line-height: 1.3; }
+        .video-text h3 { margin: 0; color: #d81b60; font-size: 1.2rem; }
+        .video-text p { margin: 5px 0 0 0; font-size: 0.9rem; color: #555; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -82,7 +86,7 @@
     </div>
 
     <div class="content-card">
-        <h2>Cẩm nang quy trình (Bấm vào mỗi ô để xem video)</h2>
+        <h2>Cẩm nang quy trình (Bấm vào ô để xem video)</h2>
 
         <div class="step-wrapper">
             <a href="LINK_VIDEO_1" target="_blank" class="step-link">
@@ -91,7 +95,7 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>1. Bánh sữa tươi chiên</h3>
-                            <p>Khám phá công thức làm món ăn vặt "quốc dân" cực hấp dẫn.</p>
+                            <p>Công thức món ăn vặt hấp dẫn. Click để xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🥚</span><span class="food-tag">Nguyên liệu sạch</span></div>
@@ -104,7 +108,7 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>2. Bánh Flan mềm mịn</h3>
-                            <p>Kỹ thuật hấp bánh chuẩn không bị rỗ, giàu dinh dưỡng.</p>
+                            <p>Kỹ thuật hấp chuẩn không rỗ. Click để xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🥣</span><span class="food-tag">Công thức chuẩn</span></div>
@@ -117,7 +121,7 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>3. Tạo hình & In 3D</h3>
-                            <p>Ứng dụng công nghệ và hình học vào tạo hình bánh nghệ thuật.</p>
+                            <p>Sáng tạo cùng công nghệ 3D. Click để xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🥐</span><span class="food-tag">Sáng tạo STEM</span></div>
@@ -130,7 +134,7 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>4. Kỹ thuật nhiệt độ</h3>
-                            <p>Làm chủ phản ứng Maillard để bánh thơm ngon chuẩn vị.</p>
+                            <p>Làm chủ nhiệt độ lò nướng. Click để xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🔥</span><span class="food-tag">Vật lý & Hóa học</span></div>
@@ -143,7 +147,7 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>5. Hoàn thiện sản phẩm</h3>
-                            <p>Trang trí và đóng gói theo tiêu chuẩn vệ sinh an toàn thực phẩm.</p>
+                            <p>Trang trí và đóng gói chuyên nghiệp. Click xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🍰</span><span class="food-tag">Thành phẩm 5 sao</span></div>
@@ -156,13 +160,12 @@
                         <div class="qr-box"><img src="https://via.placeholder.com/150?text=VIDEO"></div>
                         <div class="video-text">
                             <h3>6. Bảo quản & Phân phối</h3>
-                            <p>Cách giữ bánh tươi lâu và quy trình đưa sản phẩm tới khách hàng.</p>
+                            <p>Quy trình đưa bánh đến khách hàng. Click xem video.</p>
                         </div>
                     </div>
                     <div class="food-decor"><span class="food-icon">🚚</span><span class="food-tag">Kinh doanh STEM</span></div>
                 </div>
             </a>
-
         </div>
     </div>
 </body>
